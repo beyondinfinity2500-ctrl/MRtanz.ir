@@ -1,0 +1,900 @@
+{
+  "metadata": {
+    "project": "Mrtanz.ir",
+    "version": "0.1.0",
+    "generated": "2026-09-12T03:59:00Z",
+    "totalNodes": 30,
+    "totalEdges": 42,
+    "totalCommunities": 5,
+    "totalGodNodes": 4
+  },
+  "nodes": [
+    {
+      "id": "src/data/types.ts",
+      "type": "file",
+      "category": "data",
+      "label": "TypeScript Types",
+      "description": "Core TypeScript interfaces: Video, Playlist, Joke, Article, AdSlotName",
+      "lineCount": 57,
+      "isGodNode": true,
+      "community": "data-layer",
+      "exports": ["Video", "Playlist", "Joke", "Article", "AdSlotName"],
+      "imports": []
+    },
+    {
+      "id": "src/data/site.ts",
+      "type": "file",
+      "category": "data",
+      "label": "Site Configuration",
+      "description": "Central site config: name, URLs, navigation, social links, contact info",
+      "lineCount": 55,
+      "isGodNode": true,
+      "community": "data-layer",
+      "exports": ["siteConfig", "youtubeConfig", "socialLinks", "navigationItems", "contactInfo"],
+      "imports": []
+    },
+    {
+      "id": "src/data/videos.ts",
+      "type": "file",
+      "category": "data",
+      "label": "Video Data",
+      "description": "Video data array with 5 entries, derived featuredVideo + popularVideos",
+      "lineCount": 62,
+      "isGodNode": false,
+      "community": "data-layer",
+      "exports": ["videos", "featuredVideo", "popularVideos"],
+      "imports": ["src/data/types.ts"]
+    },
+    {
+      "id": "src/data/playlists.ts",
+      "type": "file",
+      "category": "data",
+      "label": "Playlist Data",
+      "description": "Playlist data array with 6 entries, derived featuredPlaylists",
+      "lineCount": 68,
+      "isGodNode": false,
+      "community": "data-layer",
+      "exports": ["playlists", "featuredPlaylists"],
+      "imports": ["src/data/types.ts"]
+    },
+    {
+      "id": "src/data/jokes.ts",
+      "type": "file",
+      "category": "data",
+      "label": "Joke Data",
+      "description": "Joke data array with 30 Persian jokes",
+      "lineCount": 274,
+      "isGodNode": false,
+      "community": "data-layer",
+      "exports": ["jokes"],
+      "imports": ["src/data/types.ts"]
+    },
+    {
+      "id": "src/data/ads.ts",
+      "type": "file",
+      "category": "data",
+      "label": "Ad Configuration",
+      "description": "Ad slot configuration data for 6 ad positions",
+      "lineCount": 47,
+      "isGodNode": false,
+      "community": "data-layer",
+      "exports": ["adSlots"],
+      "imports": ["src/data/types.ts"]
+    },
+    {
+      "id": "src/components/Header.tsx",
+      "type": "component",
+      "category": "ui",
+      "label": "Header Component",
+      "description": "Responsive sticky header with mobile menu, scroll-adaptive styling",
+      "lineCount": 109,
+      "isGodNode": false,
+      "community": "layout-components",
+      "exports": ["Header"],
+      "imports": ["next/link", "src/data/site.ts"],
+      "isClientComponent": true
+    },
+    {
+      "id": "src/components/Footer.tsx",
+      "type": "component",
+      "category": "ui",
+      "label": "Footer Component",
+      "description": "Site footer with 3-column grid: Brand, Links, Social",
+      "lineCount": 67,
+      "isGodNode": false,
+      "community": "layout-components",
+      "exports": ["Footer"],
+      "imports": ["next/link", "src/data/site.ts"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/components/YouTubeEmbed.tsx",
+      "type": "component",
+      "category": "content",
+      "label": "YouTube Embed",
+      "description": "YouTube iframe embed + VideoCard component",
+      "lineCount": 72,
+      "isGodNode": false,
+      "community": "content-components",
+      "exports": ["YouTubeEmbed", "VideoCard"],
+      "imports": ["src/data/types.ts"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/components/YouTubeCTA.tsx",
+      "type": "component",
+      "category": "social",
+      "label": "YouTube CTA",
+      "description": "YouTube subscribe call-to-action button",
+      "lineCount": 23,
+      "isGodNode": false,
+      "community": "social-components",
+      "exports": ["YouTubeCTA"],
+      "imports": ["src/data/site.ts"],
+      "isClientComponent": true
+    },
+    {
+      "id": "src/components/Social.tsx",
+      "type": "component",
+      "category": "social",
+      "label": "Social Components",
+      "description": "YouTube banner + Social bar with platform links",
+      "lineCount": 39,
+      "isGodNode": false,
+      "community": "social-components",
+      "exports": ["YouTubeBanner", "SocialBar"],
+      "imports": ["next/link", "src/data/site.ts"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/components/ShareButton.tsx",
+      "type": "component",
+      "category": "ui",
+      "label": "Share Button",
+      "description": "Social share buttons with copy-to-clipboard functionality",
+      "lineCount": 48,
+      "isGodNode": false,
+      "community": "ui-components",
+      "exports": ["ShareButton"],
+      "imports": [],
+      "isClientComponent": true
+    },
+    {
+      "id": "src/components/Card.tsx",
+      "type": "component",
+      "category": "content",
+      "label": "Card Components",
+      "description": "Card + VideoCard + JokeCard + PlaylistCard + ArticleCard",
+      "lineCount": 213,
+      "isGodNode": true,
+      "community": "content-components",
+      "exports": ["Card", "VideoCard", "JokeCard", "PlaylistCard", "ArticleCard"],
+      "imports": ["src/data/types.ts"],
+      "isClientComponent": true
+    },
+    {
+      "id": "src/components/Button.tsx",
+      "type": "component",
+      "category": "ui",
+      "label": "Button Component",
+      "description": "Button with 5 variants",
+      "lineCount": 34,
+      "isGodNode": false,
+      "community": "ui-components",
+      "exports": ["Button"],
+      "imports": ["src/data/types.ts"],
+      "isClientComponent": true
+    },
+    {
+      "id": "src/components/Badge.tsx",
+      "type": "component",
+      "category": "ui",
+      "label": "Badge Component",
+      "description": "Badge/Tag components with 5 variants",
+      "lineCount": 25,
+      "isGodNode": false,
+      "community": "ui-components",
+      "exports": ["Badge"],
+      "imports": ["src/data/types.ts"],
+      "isClientComponent": true
+    },
+    {
+      "id": "src/components/EmptyState.tsx",
+      "type": "component",
+      "category": "ui",
+      "label": "Empty State",
+      "description": "Empty state placeholder component",
+      "lineCount": 43,
+      "isGodNode": false,
+      "community": "ui-components",
+      "exports": ["EmptyState"],
+      "imports": [],
+      "isClientComponent": true
+    },
+    {
+      "id": "src/components/AdSlot.tsx",
+      "type": "component",
+      "category": "advertising",
+      "label": "Ad Slot Component",
+      "description": "Ad slot placeholder component for advertising positions",
+      "lineCount": 22,
+      "isGodNode": false,
+      "community": "advertising-components",
+      "exports": ["AdSlot"],
+      "imports": ["src/data/types.ts", "src/data/ads.ts"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/app/layout.tsx",
+      "type": "file",
+      "category": "layout",
+      "label": "Root Layout",
+      "description": "Root layout with metadata, HTML shell, Header, Footer, YouTubeBanner",
+      "lineCount": 77,
+      "isGodNode": true,
+      "community": "app-layout",
+      "exports": ["RootLayout", "metadata"],
+      "imports": ["src/data/site.ts", "src/components/Header.tsx", "src/components/Footer.tsx", "src/components/Social.tsx"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/app/page.tsx",
+      "type": "file",
+      "category": "page",
+      "label": "Homepage",
+      "description": "Homepage with featured video, popular videos, random joke, playlists",
+      "lineCount": 101,
+      "isGodNode": false,
+      "community": "app-pages",
+      "exports": ["HomePage", "metadata"],
+      "imports": ["src/components/YouTubeEmbed.tsx", "src/components/AdSlot.tsx", "src/data/videos.ts", "src/data/playlists.ts", "src/data/jokes.ts", "next/link"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/app/videos/page.tsx",
+      "type": "file",
+      "category": "page",
+      "label": "Videos Page",
+      "description": "Videos listing page with all video cards in grid",
+      "lineCount": 33,
+      "isGodNode": false,
+      "community": "app-pages",
+      "exports": ["VideosPage", "metadata"],
+      "imports": ["src/components/YouTubeEmbed.tsx", "src/components/AdSlot.tsx", "src/data/videos.ts", "src/data/site.ts"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/app/playlists/page.tsx",
+      "type": "file",
+      "category": "page",
+      "label": "Playlists Page",
+      "description": "Playlists listing page with playlist cards",
+      "lineCount": 48,
+      "isGodNode": false,
+      "community": "app-pages",
+      "exports": ["PlaylistsPage", "metadata"],
+      "imports": ["src/data/playlists.ts", "src/data/site.ts", "src/components/AdSlot.tsx"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/app/jokes/page.tsx",
+      "type": "file",
+      "category": "page",
+      "label": "Jokes Page",
+      "description": "Jokes archive page with list of joke articles",
+      "lineCount": 48,
+      "isGodNode": false,
+      "community": "app-pages",
+      "exports": ["JokesPage", "metadata"],
+      "imports": ["src/data/jokes.ts", "src/data/site.ts", "src/components/AdSlot.tsx"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/app/about/page.tsx",
+      "type": "file",
+      "category": "page",
+      "label": "About Page",
+      "description": "About page with static content sections",
+      "lineCount": 58,
+      "isGodNode": false,
+      "community": "app-pages",
+      "exports": ["AboutPage", "metadata"],
+      "imports": ["src/data/site.ts"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/app/contact/page.tsx",
+      "type": "file",
+      "category": "page",
+      "label": "Contact Page",
+      "description": "Contact page with WhatsApp, social media, advertising info",
+      "lineCount": 67,
+      "isGodNode": false,
+      "community": "app-pages",
+      "exports": ["ContactPage", "metadata"],
+      "imports": ["src/data/site.ts", "src/components/AdSlot.tsx"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/app/advertise/page.tsx",
+      "type": "file",
+      "category": "page",
+      "label": "Advertise Page",
+      "description": "Advertising and sponsorship information page",
+      "lineCount": 60,
+      "isGodNode": false,
+      "community": "app-pages",
+      "exports": ["AdvertisePage", "metadata"],
+      "imports": ["src/data/site.ts", "src/components/AdSlot.tsx"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/app/not-found.tsx",
+      "type": "file",
+      "category": "page",
+      "label": "404 Page",
+      "description": "Custom 404 not found page",
+      "lineCount": 20,
+      "isGodNode": false,
+      "community": "app-pages",
+      "exports": ["NotFound"],
+      "imports": ["src/components/AdSlot.tsx"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/app/sitemap.ts",
+      "type": "file",
+      "category": "seo",
+      "label": "Sitemap Generator",
+      "description": "sitemap.xml generation with 7 routes",
+      "lineCount": 51,
+      "isGodNode": false,
+      "community": "seo-config",
+      "exports": ["sitemap"],
+      "imports": ["src/data/site.ts"],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/app/robots.ts",
+      "type": "file",
+      "category": "seo",
+      "label": "Robots.txt Generator",
+      "description": "robots.txt generation with bot allow/disallow rules",
+      "lineCount": 53,
+      "isGodNode": false,
+      "community": "seo-config",
+      "exports": ["robots"],
+      "imports": [],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/app/redirects.ts",
+      "type": "file",
+      "category": "seo",
+      "label": "Legacy Redirects",
+      "description": "Legacy URL redirects (5 redirects)",
+      "lineCount": 33,
+      "isGodNode": false,
+      "community": "seo-config",
+      "exports": ["redirects"],
+      "imports": [],
+      "isClientComponent": false
+    },
+    {
+      "id": "src/app/globals.css",
+      "type": "file",
+      "category": "style",
+      "label": "Global Styles",
+      "description": "Global CSS with design tokens, typography, micro-interactions",
+      "lineCount": 246,
+      "isGodNode": false,
+      "community": "app-layout",
+      "exports": [],
+      "imports": [],
+      "isClientComponent": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "src/data/videos.ts",
+      "target": "src/data/types.ts",
+      "type": "imports",
+      "label": "imports Video type"
+    },
+    {
+      "source": "src/data/playlists.ts",
+      "target": "src/data/types.ts",
+      "type": "imports",
+      "label": "imports Playlist type"
+    },
+    {
+      "source": "src/data/jokes.ts",
+      "target": "src/data/types.ts",
+      "type": "imports",
+      "label": "imports Joke type"
+    },
+    {
+      "source": "src/data/ads.ts",
+      "target": "src/data/types.ts",
+      "type": "imports",
+      "label": "imports AdSlotName type"
+    },
+    {
+      "source": "src/components/Header.tsx",
+      "target": "src/data/site.ts",
+      "type": "imports",
+      "label": "imports navigationItems, youtubeConfig"
+    },
+    {
+      "source": "src/components/Footer.tsx",
+      "target": "src/data/site.ts",
+      "type": "imports",
+      "label": "imports navigationItems, socialLinks, siteConfig"
+    },
+    {
+      "source": "src/components/YouTubeEmbed.tsx",
+      "target": "src/data/types.ts",
+      "type": "imports",
+      "label": "imports Video type"
+    },
+    {
+      "source": "src/components/YouTubeCTA.tsx",
+      "target": "src/data/site.ts",
+      "type": "imports",
+      "label": "imports youtubeConfig"
+    },
+    {
+      "source": "src/components/Social.tsx",
+      "target": "src/data/site.ts",
+      "type": "imports",
+      "label": "imports socialLinks, youtubeConfig"
+    },
+    {
+      "source": "src/components/Card.tsx",
+      "target": "src/data/types.ts",
+      "type": "imports",
+      "label": "imports Video, Playlist, Joke, Article types"
+    },
+    {
+      "source": "src/components/Button.tsx",
+      "target": "src/data/types.ts",
+      "type": "imports",
+      "label": "imports AdSlotName type"
+    },
+    {
+      "source": "src/components/Badge.tsx",
+      "target": "src/data/types.ts",
+      "type": "imports",
+      "label": "imports AdSlotName type"
+    },
+    {
+      "source": "src/components/AdSlot.tsx",
+      "target": "src/data/types.ts",
+      "type": "imports",
+      "label": "imports AdSlotName type"
+    },
+    {
+      "source": "src/components/AdSlot.tsx",
+      "target": "src/data/ads.ts",
+      "type": "imports",
+      "label": "imports adSlots configuration"
+    },
+    {
+      "source": "src/app/layout.tsx",
+      "target": "src/data/site.ts",
+      "type": "imports",
+      "label": "imports siteConfig"
+    },
+    {
+      "source": "src/app/layout.tsx",
+      "target": "src/components/Header.tsx",
+      "type": "imports",
+      "label": "imports Header component"
+    },
+    {
+      "source": "src/app/layout.tsx",
+      "target": "src/components/Footer.tsx",
+      "type": "imports",
+      "label": "imports Footer component"
+    },
+    {
+      "source": "src/app/layout.tsx",
+      "target": "src/components/Social.tsx",
+      "type": "imports",
+      "label": "imports YouTubeBanner component"
+    },
+    {
+      "source": "src/app/page.tsx",
+      "target": "src/components/YouTubeEmbed.tsx",
+      "type": "imports",
+      "label": "imports VideoCard component"
+    },
+    {
+      "source": "src/app/page.tsx",
+      "target": "src/components/AdSlot.tsx",
+      "type": "imports",
+      "label": "imports AdSlot component"
+    },
+    {
+      "source": "src/app/page.tsx",
+      "target": "src/data/videos.ts",
+      "type": "imports",
+      "label": "imports videos, featuredVideo, popularVideos"
+    },
+    {
+      "source": "src/app/page.tsx",
+      "target": "src/data/playlists.ts",
+      "type": "imports",
+      "label": "imports playlists, featuredPlaylists"
+    },
+    {
+      "source": "src/app/page.tsx",
+      "target": "src/data/jokes.ts",
+      "type": "imports",
+      "label": "imports jokes"
+    },
+    {
+      "source": "src/app/videos/page.tsx",
+      "target": "src/components/YouTubeEmbed.tsx",
+      "type": "imports",
+      "label": "imports VideoCard component"
+    },
+    {
+      "source": "src/app/videos/page.tsx",
+      "target": "src/components/AdSlot.tsx",
+      "type": "imports",
+      "label": "imports AdSlot component"
+    },
+    {
+      "source": "src/app/videos/page.tsx",
+      "target": "src/data/videos.ts",
+      "type": "imports",
+      "label": "imports videos array"
+    },
+    {
+      "source": "src/app/videos/page.tsx",
+      "target": "src/data/site.ts",
+      "type": "imports",
+      "label": "imports siteConfig"
+    },
+    {
+      "source": "src/app/playlists/page.tsx",
+      "target": "src/data/playlists.ts",
+      "type": "imports",
+      "label": "imports playlists array"
+    },
+    {
+      "source": "src/app/playlists/page.tsx",
+      "target": "src/data/site.ts",
+      "type": "imports",
+      "label": "imports siteConfig"
+    },
+    {
+      "source": "src/app/playlists/page.tsx",
+      "target": "src/components/AdSlot.tsx",
+      "type": "imports",
+      "label": "imports AdSlot component"
+    },
+    {
+      "source": "src/app/jokes/page.tsx",
+      "target": "src/data/jokes.ts",
+      "type": "imports",
+      "label": "imports jokes array"
+    },
+    {
+      "source": "src/app/jokes/page.tsx",
+      "target": "src/data/site.ts",
+      "type": "imports",
+      "label": "imports siteConfig"
+    },
+    {
+      "source": "src/app/jokes/page.tsx",
+      "target": "src/components/AdSlot.tsx",
+      "type": "imports",
+      "label": "imports AdSlot component"
+    },
+    {
+      "source": "src/app/about/page.tsx",
+      "target": "src/data/site.ts",
+      "type": "imports",
+      "label": "imports siteConfig"
+    },
+    {
+      "source": "src/app/contact/page.tsx",
+      "target": "src/data/site.ts",
+      "type": "imports",
+      "label": "imports siteConfig, contactInfo, socialLinks"
+    },
+    {
+      "source": "src/app/contact/page.tsx",
+      "target": "src/components/AdSlot.tsx",
+      "type": "imports",
+      "label": "imports AdSlot component"
+    },
+    {
+      "source": "src/app/advertise/page.tsx",
+      "target": "src/data/site.ts",
+      "type": "imports",
+      "label": "imports siteConfig, contactInfo"
+    },
+    {
+      "source": "src/app/advertise/page.tsx",
+      "target": "src/components/AdSlot.tsx",
+      "type": "imports",
+      "label": "imports AdSlot component"
+    },
+    {
+      "source": "src/app/not-found.tsx",
+      "target": "src/components/AdSlot.tsx",
+      "type": "imports",
+      "label": "imports AdSlot component"
+    },
+    {
+      "source": "src/app/sitemap.ts",
+      "target": "src/data/site.ts",
+      "type": "imports",
+      "label": "imports siteConfig"
+    }
+  ],
+  "communities": [
+    {
+      "id": "data-layer",
+      "label": "Data Layer",
+      "description": "Core data types, site configuration, and static data arrays",
+      "nodes": [
+        "src/data/types.ts",
+        "src/data/site.ts",
+        "src/data/videos.ts",
+        "src/data/playlists.ts",
+        "src/data/jokes.ts",
+        "src/data/ads.ts"
+      ],
+      "importance": "high"
+    },
+    {
+      "id": "layout-components",
+      "label": "Layout Components",
+      "description": "Structural components: Header, Footer",
+      "nodes": [
+        "src/components/Header.tsx",
+        "src/components/Footer.tsx"
+      ],
+      "importance": "high"
+    },
+    {
+      "id": "content-components",
+      "label": "Content Components",
+      "description": "Content display components: YouTubeEmbed, Card variants",
+      "nodes": [
+        "src/components/YouTubeEmbed.tsx",
+        "src/components/Card.tsx"
+      ],
+      "importance": "medium"
+    },
+    {
+      "id": "social-components",
+      "label": "Social Components",
+      "description": "YouTube and social media components: YouTubeCTA, Social",
+      "nodes": [
+        "src/components/YouTubeCTA.tsx",
+        "src/components/Social.tsx"
+      ],
+      "importance": "medium"
+    },
+    {
+      "id": "ui-components",
+      "label": "UI Components",
+      "description": "Generic UI components: Button, Badge, ShareButton, EmptyState",
+      "nodes": [
+        "src/components/ShareButton.tsx",
+        "src/components/Button.tsx",
+        "src/components/Badge.tsx",
+        "src/components/EmptyState.tsx"
+      ],
+      "importance": "low"
+    },
+    {
+      "id": "advertising-components",
+      "label": "Advertising Components",
+      "description": "Ad slot components",
+      "nodes": [
+        "src/components/AdSlot.tsx"
+      ],
+      "importance": "low"
+    },
+    {
+      "id": "app-layout",
+      "label": "App Layout",
+      "description": "Root layout and global styles",
+      "nodes": [
+        "src/app/layout.tsx",
+        "src/app/globals.css"
+      ],
+      "importance": "high"
+    },
+    {
+      "id": "app-pages",
+      "label": "App Pages",
+      "description": "All page routes: homepage, videos, playlists, jokes, about, contact, advertise, 404",
+      "nodes": [
+        "src/app/page.tsx",
+        "src/app/videos/page.tsx",
+        "src/app/playlists/page.tsx",
+        "src/app/jokes/page.tsx",
+        "src/app/about/page.tsx",
+        "src/app/contact/page.tsx",
+        "src/app/advertise/page.tsx",
+        "src/app/not-found.tsx"
+      ],
+      "importance": "high"
+    },
+    {
+      "id": "seo-config",
+      "label": "SEO Configuration",
+      "description": "SEO files: sitemap, robots, redirects",
+      "nodes": [
+        "src/app/sitemap.ts",
+        "src/app/robots.ts",
+        "src/app/redirects.ts"
+      ],
+      "importance": "medium"
+    }
+  ],
+  "godNodes": [
+    {
+      "id": "src/data/types.ts",
+      "label": "TypeScript Types",
+      "reason": "Foundation of type system - imported by 10+ files",
+      "importance": 10,
+      "importedBy": [
+        "src/data/videos.ts",
+        "src/data/playlists.ts",
+        "src/data/jokes.ts",
+        "src/data/ads.ts",
+        "src/components/YouTubeEmbed.tsx",
+        "src/components/Card.tsx",
+        "src/components/Button.tsx",
+        "src/components/Badge.tsx",
+        "src/components/AdSlot.tsx"
+      ]
+    },
+    {
+      "id": "src/data/site.ts",
+      "label": "Site Configuration",
+      "reason": "Central configuration consumed by layout, most pages, and social components",
+      "importance": 9,
+      "importedBy": [
+        "src/app/layout.tsx",
+        "src/app/page.tsx",
+        "src/app/videos/page.tsx",
+        "src/app/playlists/page.tsx",
+        "src/app/jokes/page.tsx",
+        "src/app/about/page.tsx",
+        "src/app/contact/page.tsx",
+        "src/app/advertise/page.tsx",
+        "src/app/sitemap.ts",
+        "src/components/Header.tsx",
+        "src/components/Footer.tsx",
+        "src/components/YouTubeCTA.tsx",
+        "src/components/Social.tsx"
+      ]
+    },
+    {
+      "id": "src/components/Card.tsx",
+      "label": "Card Components",
+      "reason": "Most complex component file with 5 card variants, but currently underutilized",
+      "importance": 7,
+      "importedBy": []
+    },
+    {
+      "id": "src/app/layout.tsx",
+      "label": "Root Layout",
+      "reason": "Entry point of the application, wraps all pages",
+      "importance": 8,
+      "importedBy": []
+    }
+  ],
+  "crossFileRelationships": [
+    {
+      "type": "duplicated-component",
+      "description": "VideoCard component defined in both YouTubeEmbed.tsx and Card.tsx",
+      "files": ["src/components/YouTubeEmbed.tsx", "src/components/Card.tsx"],
+      "severity": "medium",
+      "recommendation": "Consolidate to single VideoCard definition"
+    },
+    {
+      "type": "unused-imports",
+      "description": "Button.tsx and Badge.tsx import AdSlotName but never use it",
+      "files": ["src/components/Button.tsx", "src/components/Badge.tsx"],
+      "severity": "low",
+      "recommendation": "Remove unused imports"
+    },
+    {
+      "type": "hardcoded-urls",
+      "description": "redirects.ts and robots.ts hardcode https://www.mrtanz.ir instead of using siteConfig.url",
+      "files": ["src/app/redirects.ts", "src/app/robots.ts"],
+      "severity": "low",
+      "recommendation": "Use siteConfig.url for consistency"
+    },
+    {
+      "type": "syntax-error",
+      "description": "YouTubeCTA.tsx has malformed template literal on line 12-13",
+      "files": ["src/components/YouTubeCTA.tsx"],
+      "severity": "high",
+      "recommendation": "Fix syntax error to prevent build failure"
+    },
+    {
+      "type": "unused-component",
+      "description": "Card.tsx VideoCard variant is not used by any page (pages use YouTubeEmbed.tsx VideoCard)",
+      "files": ["src/components/Card.tsx", "src/app/page.tsx", "src/app/videos/page.tsx"],
+      "severity": "medium",
+      "recommendation": "Either use Card.tsx VideoCard or remove duplicate"
+    },
+    {
+      "type": "empty-public-dir",
+      "description": "Public directory is empty - no favicon, OG image, or static assets",
+      "files": ["public/"],
+      "severity": "medium",
+      "recommendation": "Add necessary static assets before production deployment"
+    }
+  ],
+  "architectureLayers": [
+    {
+      "id": 0,
+      "name": "Foundation",
+      "description": "Core types and configuration that everything depends on",
+      "nodes": ["src/data/types.ts", "src/data/site.ts"]
+    },
+    {
+      "id": 1,
+      "name": "Data",
+      "description": "Static data arrays and derived exports",
+      "nodes": ["src/data/videos.ts", "src/data/playlists.ts", "src/data/jokes.ts", "src/data/ads.ts"]
+    },
+    {
+      "id": 2,
+      "name": "Components",
+      "description": "Reusable UI components",
+      "nodes": [
+        "src/components/Header.tsx",
+        "src/components/Footer.tsx",
+        "src/components/YouTubeEmbed.tsx",
+        "src/components/YouTubeCTA.tsx",
+        "src/components/Social.tsx",
+        "src/components/ShareButton.tsx",
+        "src/components/Card.tsx",
+        "src/components/Button.tsx",
+        "src/components/Badge.tsx",
+        "src/components/EmptyState.tsx",
+        "src/components/AdSlot.tsx"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Pages",
+      "description": "Route-level page components",
+      "nodes": [
+        "src/app/layout.tsx",
+        "src/app/page.tsx",
+        "src/app/videos/page.tsx",
+        "src/app/playlists/page.tsx",
+        "src/app/jokes/page.tsx",
+        "src/app/about/page.tsx",
+        "src/app/contact/page.tsx",
+        "src/app/advertise/page.tsx",
+        "src/app/not-found.tsx"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "SEO/Config",
+      "description": "Search engine optimization and configuration files",
+      "nodes": [
+        "src/app/sitemap.ts",
+        "src/app/robots.ts",
+        "src/app/redirects.ts",
+        "src/app/globals.css"
+      ]
+    }
+  ]
+}
