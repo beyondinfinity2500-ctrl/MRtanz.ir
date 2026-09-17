@@ -1,78 +1,28 @@
 @import "tailwindcss";
 
-/* === COLOR TOKENS === */
-/* Semantic design tokens for easy theming */
+/* === TAILWIND V4 THEME REGISTRATION === */
+/* Register custom colors so Tailwind generates utility classes */
 
-:root {
-  /* Background layers - deep charcoal, NOT pure black */
+@theme {
   --color-background: #0a0a0f;
   --color-surface: #12121a;
   --color-surface-elevated: #1a1a24;
   --color-card: #1e1e2a;
   --color-border: #2a2a3a;
 
-  /* Text colors */
-  --color-text-primary: #f0f0f5;
-  --color-text-secondary: #a0a0b0;
-  --color-text-muted: #6a6a7a;
+  --color-text-primary: #f0ece6;
+  --color-text-secondary: #a8a0a0;
+  --color-text-muted: #6a6270;
 
-  /* Accent colors - distinctive energetic accent */
-  --color-accent-primary: #eab308; /* electric yellow - signature MRTanz color */
-  --color-accent-secondary: #a78bfa; /* restrained electric purple */
+  --color-accent-primary: #eab308;
+  --color-accent-secondary: #a78bfa;
 
-  /* YouTube red - ONLY for YouTube-specific actions */
   --color-yt: #ff0000;
 
-  /* Status */
   --color-success: #22c55e;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
 }
-
-/* === TYPOGRAPHY SCALE === */
-/* Vazirmatn-based hierarchy, optimized for Persian */
-
-/* Display - major hero headlines */
---font-display: "Vazirmatn", "Tahoma", "Arial", sans-serif;
-font-size: 4rem;
-font-weight: 800;
-line-height: 1.1;
-
-/* H1 - Page titles */
---font-h1: "Vazirmatn", "Tahoma", "Arial", sans-serif;
-font-size: 3rem;
-font-weight: 800;
-line-height: 1.2;
-
-/* H2 - Major section headings */
---font-h2: "Vazirmatn", "Tahoma", "Arial", sans-serif;
-font-size: 2.25rem;
-font-weight: 700;
-line-height: 1.3;
-
-/* H3 - Cards/subsections */
---font-h3: "Vazirmatn", "Tahoma", "Arial", sans-serif;
-font-size: 1.75rem;
-font-weight: 600;
-line-height: 1.4;
-
-/* Body - Main Persian content */
---font-body: "Vazirmatn", "Tahoma", "Arial", sans-serif;
-font-size: 1rem;
-font-weight: 500;
-line-height: 1.7;
-
-/* Small - Metadata and supporting information */
---font-small: "Vazirmatn", "Tahoma", "Arial", sans-serif;
-font-size: 0.875rem;
-font-weight: 500;
-line-height: 1.5;
-
-/* Caption - Small supporting labels */
---font-caption: "Vazirmatn", "Tahoma", "Arial", sans-serif;
-font-size: 0.75rem;
-font-weight: 400;
-line-height: 1.4;
 
 /* === BASE STYLES === */
 
@@ -82,7 +32,7 @@ html {
 }
 
 body {
-  font-family: var(--font-body);
+  font-family: "Vazirmatn", "Tahoma", "Arial", sans-serif;
   background-color: var(--color-background);
   color: var(--color-text-primary);
   line-height: 1.7;
@@ -90,43 +40,48 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Avoid pure black everywhere - use dark surfaces */
+h1, h2, h3 {
+  font-family: "Vazirmatn", "Tahoma", "Arial", sans-serif;
+}
+
 h1 {
-  font-family: var(--font-h1);
-  font-size: var(--font-h1-size, 3rem);
-  font-weight: var(--font-h1-weight, 800);
-  line-height: var(--font-h1-line, 1.2);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
 }
 
 h2 {
-  font-family: var(--font-h2);
-  font-size: var(--font-h2-size, 2.25rem);
-  font-weight: var(--font-h2-weight, 700);
-  line-height: var(--font-h2-line, 1.3);
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 h3 {
-  font-family: var(--font-h3);
-  font-size: var(--font-h3-size, 1.75rem);
-  font-weight: var(--font-h3-weight, 600);
-  line-height: var(--font-h3-line, 1.4);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
-/* Buttons - using existing btn-primary/.btn-youtube patterns enhanced */
+/* === UTILITY CLASSES === */
 
-/* === SPACING SYSTEM === */
 * {
   box-sizing: border-box;
 }
 
-.main-container {
+.container-main {
   width: 100%;
   max-width: 1400px;
   margin-inline: auto;
   padding-inline: 1.5rem;
 }
 
-/* Spacing scale - limited set of values */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+}
+
+/* Spacing scale */
 .space-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
 .space-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
 .space-3 { margin-top: 0.75rem; margin-bottom: 0.75rem; }
@@ -137,18 +92,19 @@ h3 {
 .space-10 { margin-top: 2.5rem; margin-bottom: 2.5rem; }
 .space-12 { margin-top: 3rem; margin-bottom: 3rem; }
 
-/* === BORDER RADIUS SYSTEM === */
+/* Border radius */
 .radius-sm { border-radius: 0.375rem; }
 .radius-md { border-radius: 0.5rem; }
 .radius-lg { border-radius: 0.75rem; }
 .radius-xl { border-radius: 1rem; }
 
-/* === SHADOWS === */
+/* Shadows */
 .shadow-sm { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.2); }
 .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2); }
 .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2); }
 
 /* === FOCUS STATES === */
+
 .focus-visible\:outline:focus-visible {
   outline: 2px var(--color-accent-primary) solid;
   outline-offset: 2px;
@@ -172,60 +128,30 @@ h3 {
 
 /* === MICRO-INTERACTIONS === */
 
-/* Card hover - subtle elevation */
 .hover\:shadow-md:hover {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* Button hover */
 .hover\:bg-accent-primary\2f90:hover {
   background-color: var(--color-accent-primary) !important;
 }
 
-/* Focus feedback */
 .focus-visible\:bg-accent-primary\2f20:focus-visible {
   background-color: var(--color-accent-primary) !important;
   outline: 2px var(--color-accent-primary) solid;
   outline-offset: 2px;
 }
 
-/* Navigation link hover */
 .hover\:text-accent-primary:hover {
   color: var(--color-accent-primary) !important;
 }
 
-/* Active state */
 .active\:text-accent-primary:active {
   color: var(--color-accent-primary/80) !important;
 }
 
-/* Subtle image scale on hover */
 .hover\:scale-105:hover {
   transform: scale(1.05) !important;
-}
-
-/* Menu transitions */
-.transition-\$default {
-  transition-property: color, background-color, border-color, text-decoration-color, outline-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-/* Button base transitions */
-.transition-\$fast {
-  transition-property: color, background-color, border-color, text-decoration-color, outline-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-/* Text transition */
-.transition-\$color {
-  transition-color: 150ms ease-in-out;
-}
-
-/* Subtle border on focus */
-.focus\:border-2:focus {
-  border-width: 2px !important;
 }
 
 /* Selection color */
@@ -234,7 +160,7 @@ h3 {
   color: var(--color-background);
 }
 
-/* Input and textarea focus */
+/* Focus utilities */
 .focus\:outline-none:focus-visible {
   outline: none !important;
 }
@@ -245,4 +171,8 @@ h3 {
   ring-offset-color: var(--color-background);
   ring-color: var(--color-accent-primary);
   ring-width: 2px;
+}
+
+.focus\:border-2:focus {
+  border-width: 2px !important;
 }

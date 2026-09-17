@@ -27,6 +27,13 @@ export interface Playlist {
   videoCount?: number;
 }
 
+export type JokeSourceType =
+  | "original"
+  | "user-submitted"
+  | "public-domain"
+  | "licensed"
+  | "curated-link";
+
 export interface Joke {
   id: string;
   slug: string;
@@ -34,6 +41,11 @@ export interface Joke {
   content: string;
   category: string;
   tags: string[];
+  sourceType?: JokeSourceType;
+  sourceName?: string;
+  sourceUrl?: string;
+  author?: string;
+  attribution?: string;
 }
 
 export interface Article {
