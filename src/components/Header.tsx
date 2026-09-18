@@ -26,8 +26,8 @@ export function Header() {
     >
       <div className="container-main flex items-center justify-between h-16 sm:h-20">
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="text-xl font-extrabold text-accent-primary">طنز</span>
           <span className="text-xl font-extrabold text-text-primary">مستر</span>
+          <span className="text-xl font-extrabold text-accent-primary"> طنز</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">

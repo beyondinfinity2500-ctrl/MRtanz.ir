@@ -91,7 +91,7 @@ export function VideoCard({ video, className }: { video: Video; className?: stri
   );
 }
 
-/* Joke Card - distinctive joke card */
+/* Joke Card */
 export function JokeCard({ joke, className }: { joke: Joke; className?: string }) {
   return (
     <Link href={`/jokes/${joke.slug}/`} className="block">

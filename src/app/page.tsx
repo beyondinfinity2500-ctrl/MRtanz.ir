@@ -5,7 +5,7 @@ import { YouTubeCTA } from "@/components/YouTubeCTA";
 import { featuredVideo, popularVideos } from "@/data/videos";
 import { featuredPlaylists } from "@/data/playlists";
 import { articles } from "@/data/articles";
-import { jokes, getFeaturedJoke } from "@/data/jokes";
+import { getFeaturedJoke } from "@/data/jokes";
 import { siteConfig } from "@/data/site";
 import Link from "next/link";
 
@@ -18,8 +18,6 @@ export const metadata = {
 };
 
 export default function HomePage() {
-  const featuredJoke = getFeaturedJoke();
-
   return (
     <>
       {/* === HERO === */}
@@ -82,12 +80,6 @@ export default function HomePage() {
               </svg>
               <span>بروزرسانی هفتگی</span>
             </div>
-            <div className="flex items-center gap-1.5">
-              <svg className="w-4 h-4 text-accent-primary" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
-              <span>+{jokes.length} جوک خنده‌دار</span>
-            </div>
           </div>
         </div>
       </section>
@@ -135,60 +127,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* === FEATURED JOKE === */}
-      <section className="container-main py-8 md:py-12">
-        <div className="flex items-center justify-between mb-5">
-          <div>
-            <h2 className="text-xl sm:text-2xl font-extrabold text-text-primary mb-1">جوک امروز</h2>
-            <p className="text-text-muted text-sm">ضحك برای سلامتی جسم و روح</p>
-          </div>
-          <Link
-            href="/jokes/"
-            className="text-xs sm:text-sm text-accent-primary hover:text-accent-primary/80 font-medium transition-colors"
-          >
-            آرشیو جوک ←
-          </Link>
-        </div>
-        <div className="card p-6 sm:p-8 md:p-10 relative overflow-hidden">
-          <div className="absolute top-4 left-4 text-6xl sm:text-7xl text-accent-primary/10 font-extrabold select-none pointer-events-none" aria-hidden="true">
-            ؟
-          </div>
-
-          <div className="relative">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-accent-primary/10 text-accent-primary text-xs font-bold">
-                ✦ جوک منتخب
-              </span>
-            </div>
-
-            <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-3 leading-relaxed">
-              {featuredJoke.title}
-            </h3>
-            <p className="text-text-secondary text-sm sm:text-base leading-relaxed mb-6">
-              {featuredJoke.content}
-            </p>
-
-            <div className="flex flex-wrap items-center gap-3">
-              <Link
-                href={`/jokes/${featuredJoke.slug}/`}
-                className="inline-flex items-center gap-2 text-sm font-medium text-accent-primary hover:text-accent-primary/80 transition-colors"
-              >
-                مشاهده کامل
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </Link>
-              <Link
-                href="/jokes/"
-                className="inline-flex items-center gap-2 text-sm font-medium text-text-muted hover:text-text-primary transition-colors"
-              >
-                آرشیو جوک
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* === PLAYLISTS === */}
       <section className="container-main py-8 md:py-12">
         <div className="flex items-center justify-between mb-5">
@@ -210,7 +148,46 @@ export default function HomePage() {
         </div>
       </section>
 
-{/* === FEATURED ARTICLES === */}
+      {/* === FEATURED JOKE === */}
+      {getFeaturedJoke() && (
+        <section className="container-main py-8 md:py-12">
+          <div className="card p-6 sm:p-8 md:p-10 relative overflow-hidden">
+            <div className="absolute top-4 left-4 text-6xl sm:text-7xl text-accent-primary/10 font-extrabold select-none pointer-events-none" aria-hidden="true">
+              ؟
+            </div>
+            <div className="relative">
+              <div className="flex items-center justify-between mb-4">
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-accent-primary/10 text-accent-primary text-xs font-bold">
+                  ✦ جوک روز
+                </span>
+                <Link
+                  href="/jokes/"
+                  className="text-xs sm:text-sm text-accent-primary hover:text-accent-primary/80 font-medium transition-colors"
+                >
+                  آرشیو جوک ←
+                </Link>
+              </div>
+              <h2 className="text-lg sm:text-xl font-bold text-text-primary mb-3 leading-relaxed">
+                {getFeaturedJoke()?.title}
+              </h2>
+              <p className="text-text-secondary text-sm sm:text-base leading-relaxed mb-4">
+                {getFeaturedJoke()?.content}
+              </p>
+              <Link
+                href={`/jokes/${getFeaturedJoke()?.slug}/`}
+                className="inline-flex items-center gap-2 text-sm font-medium text-accent-primary hover:text-accent-primary/80 transition-colors"
+              >
+                مشاهده کامل
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* === FEATURED ARTICLES === */}
       <section className="container-main py-8 md:py-12">
         <div className="flex flex-col md:flex-row items-center gap-4 mb-6">
           <div>

@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/data/site";
 import { videos } from "@/data/videos";
 import { playlists } from "@/data/playlists";
-import { articles } from "@/data/articles";
 import { jokes } from "@/data/jokes";
+import { articles } from "@/data/articles";
 
 export const dynamic = "force-static";
 
@@ -22,6 +22,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.6,
+  }));
+
+  const jokeEntries: MetadataRoute.Sitemap = jokes.map((joke) => ({
+    url: `${baseUrl}/jokes/${joke.slug}/`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.4,
   }));
 
   return [
@@ -49,14 +56,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/jokes/`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.8,
+      priority: 0.7,
     },
-    ...jokes.map((joke) => ({
-      url: `${baseUrl}/jokes/${joke.slug}/`,
-      lastModified: new Date(),
-      changeFrequency: "weekly" as const,
-      priority: 0.5,
-    })),
+    ...jokeEntries,
     ...articles.map((article) => ({
       url: `${baseUrl}/articles/${article.slug}/`,
       lastModified: article.publishedAt ? new Date(article.publishedAt) : new Date(),
@@ -82,13 +84,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/mrtanz/`,
+      url: `${baseUrl}/mrtanz.html`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/digikala/`,
+      url: `${baseUrl}/digikala.html`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/Tabligh.html`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,

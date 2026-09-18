@@ -10,8 +10,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <Link href="/" className="inline-block mb-4">
-              <span className="text-xl font-extrabold text-accent-primary">طنز</span>
               <span className="text-xl font-extrabold text-text-primary">مستر</span>
+              <span className="text-xl font-extrabold text-accent-primary"> طنز</span>
             </Link>
             <p className="text-sm leading-relaxed text-text-muted">
               {siteConfig.shortDescription}

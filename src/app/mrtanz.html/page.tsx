@@ -4,13 +4,20 @@ import { siteConfig } from "@/data/site";
 export const metadata: Metadata = {
   title: "درباره مستر طنز",
   description:
-    "درباره مستر طنز — سایت خنده، سرگرمی و استندآپ کمدی برای ایرانیان داخل و خارج از کشور",
+    "درباره مستر طنز — سایت خنده، سرگرمی و استندآپ کمدی برای ایرانیان داخل و خارج از کشور. اهمیت خنده و شادی برای سلامت جسم و روح.",
   alternates: {
-    canonical: `${siteConfig.url}/mrtanz/`,
+    canonical: `${siteConfig.url}/mrtanz.html`,
+  },
+  openGraph: {
+    title: "درباره مستر طنز",
+    description:
+      "درباره مستر طنز — سایت خنده، سرگرمی و استندآپ کمدی برای ایرانیان داخل و خارج از کشور",
+    type: "website",
+    url: `${siteConfig.url}/mrtanz.html`,
   },
 };
 
-export default function MrTanzPage() {
+export default function MrTanzLegacyPage() {
   return (
     <div className="container-main py-8 md:py-12 max-w-3xl mx-auto">
       <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary mb-6">

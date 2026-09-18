@@ -6,11 +6,18 @@ export const metadata: Metadata = {
   description:
     "حمایت از مستر طنز، بدون پرداخت یک ریال! با خرید از دیجی‌کالا از طریق لینک همکاری در فروش مستر طنز",
   alternates: {
-    canonical: `${siteConfig.url}/digikala/`,
+    canonical: `${siteConfig.url}/digikala.html`,
+  },
+  openGraph: {
+    title: "حمایت از مستر طنز با خرید از دیجی‌کالا",
+    description:
+      "حمایت از مستر طنز، بدون پرداخت یک ریال! با خرید از دیجی‌کالا از طریق لینک همکاری در فروش مستر طنز",
+    type: "website",
+    url: `${siteConfig.url}/digikala.html`,
   },
 };
 
-export default function DigikalaPage() {
+export default function DigikalaLegacyPage() {
   return (
     <div className="container-main py-8 md:py-12 max-w-3xl mx-auto">
       <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary mb-6">

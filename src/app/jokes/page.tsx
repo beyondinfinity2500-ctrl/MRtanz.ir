@@ -39,36 +39,38 @@ export default function JokesPage() {
       </div>
 
       {/* Featured Joke of the Day */}
-      <section className="mb-8 card p-6 sm:p-8 relative overflow-hidden">
-        <div className="absolute top-4 left-4 text-6xl sm:text-7xl text-accent-primary/10 font-extrabold select-none pointer-events-none" aria-hidden="true">
-          ؟
-        </div>
-        <div className="relative">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-accent-primary/10 text-accent-primary text-xs font-bold">
-              ✦ جوک امروز
-            </span>
-            {featured.category && (
-              <span className="text-xs text-text-muted">{featured.category}</span>
-            )}
+      {featured && (
+        <section className="mb-8 card p-6 sm:p-8 relative overflow-hidden">
+          <div className="absolute top-4 left-4 text-6xl sm:text-7xl text-accent-primary/10 font-extrabold select-none pointer-events-none" aria-hidden="true">
+            ؟
           </div>
-          <h2 className="text-lg sm:text-xl font-bold text-text-primary mb-3 leading-relaxed">
-            {featured.title}
-          </h2>
-          <p className="text-text-secondary text-sm sm:text-base leading-relaxed mb-4">
-            {featured.content}
-          </p>
-          <Link
-            href={`/jokes/${featured.slug}/`}
-            className="inline-flex items-center gap-2 text-sm font-medium text-accent-primary hover:text-accent-primary/80 transition-colors"
-          >
-            مشاهده کامل
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </Link>
-        </div>
-      </section>
+          <div className="relative">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-accent-primary/10 text-accent-primary text-xs font-bold">
+                ✦ جوک امروز
+              </span>
+              {featured.category && (
+                <span className="text-xs text-text-muted">{featured.category}</span>
+              )}
+            </div>
+            <h2 className="text-lg sm:text-xl font-bold text-text-primary mb-3 leading-relaxed">
+              {featured.title}
+            </h2>
+            <p className="text-text-secondary text-sm sm:text-base leading-relaxed mb-4">
+              {featured.content}
+            </p>
+            <Link
+              href={`/jokes/${featured.slug}/`}
+              className="inline-flex items-center gap-2 text-sm font-medium text-accent-primary hover:text-accent-primary/80 transition-colors"
+            >
+              مشاهده کامل
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* Category Pills */}
       {categories.length > 1 && (
