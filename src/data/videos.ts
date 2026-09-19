@@ -3,7 +3,7 @@ import type { Video } from "./types";
 export const videos: Video[] = [
   {
     id: "1",
-    slug: "live-broadcast-cinema-tv",
+    slug: "پخش-زنده-فیلم-صدا-سیما",
     youtubeId: "E9XNlQCvdrU",
     title: "پخش زنده فیلم سوپر در صدا و سیما",
     description: "کلیپ طنز از مستر طنز درباره اتفاقات خنده‌دار صدا و سیما",
@@ -16,7 +16,7 @@ export const videos: Video[] = [
   },
   {
     id: "2",
-    slug: "new-comedy-clip-mousavi",
+    slug: "کلیپ-طنز-جدید-میثاقی",
     youtubeId: "",
     title: "نسخه تازه کلیپ طنز: آبش رو هم آقای میثاقی بخوره!",
     description: "کلیپ طنز جدید از مستر طنز",
@@ -29,7 +29,7 @@ export const videos: Video[] = [
   },
   {
     id: "3",
-    slug: "c1Y5k-comedy-dubbing",
+    slug: "فیلم-دوبله-طنز-دروازه-بان-استقلال",
     youtubeId: "c1Y5k_Aq2CI",
     title: "کلیپ طنز دوبله",
     description: "کلیپ طنز دوبله شده از مستر طنز",
@@ -42,7 +42,7 @@ export const videos: Video[] = [
   },
   {
     id: "4",
-    slug: "doctor-game-shah-era",
+    slug: "فیلم-دکتر-بازی-زمان-شاه",
     youtubeId: "",
     title: "کلیپ طنز: دکتربازی تو زمان شاه!",
     description: "کلیپ طنز تاریخی از مستر طنز",
@@ -55,7 +55,7 @@ export const videos: Video[] = [
   },
   {
     id: "5",
-    slug: "ronaldo-comedy-clip",
+    slug: "فیلم-طنز-رونالدو",
     youtubeId: "",
     title: "کلیپ طنز رونالدو",
     description: "کلیپ طنز ورزشی درباره رونالدو",
@@ -68,7 +68,7 @@ export const videos: Video[] = [
   },
   {
     id: "6",
-    slug: "nostalgia",
+    slug: "فیلم-نوستالژی",
     youtubeId: "gTfXg1vTnTY",
     title: "نوستالژی",
     description: "کلیپ نوستالژی از مستر طنز",
@@ -81,7 +81,7 @@ export const videos: Video[] = [
   },
   {
     id: "7",
-    slug: "shohar-karbalad",
+    slug: "فیلم-شوهر-کاربلد-سیاستمدار",
     youtubeId: "FMo8Vt4U4A0",
     title: "شوهر کاربلد و سیاستمدار ایرانی یعنی ایشون",
     description: "کلیپ کوتاه طنز از مستر طنز",
@@ -94,7 +94,7 @@ export const videos: Video[] = [
   },
   {
     id: "8",
-    slug: "gagool-in-google",
+    slug: "فیلم-گاگول-گوگل",
     youtubeId: "lr27B_KicdA",
     title: "یک گاگول در گوگل!",
     description: "کلیپ کوتاه طنز از مستر طنز",
@@ -107,7 +107,7 @@ export const videos: Video[] = [
   },
   {
     id: "9",
-    slug: "tarif-e-torki-ha-az-aroos-e-irani",
+    slug: "فیلم-تعریف-ترکیه‌ای-عروس-ایرانی",
     youtubeId: "0p-6I0Etiaw",
     title: "تعریف ترکیه ای ها از عروس ایرانی",
     description: "کلیپ کوتاه طنز از مستر طنز",
@@ -120,7 +120,7 @@ export const videos: Video[] = [
   },
   {
     id: "10",
-    slug: "mashkel-e-amoozesh-be-dokhtar-e-irani",
+    slug: "فیلم-مشکل-آموزش-دختر-ایرانی",
     youtubeId: "ucAvte7RJlM",
     title: "مشکل آموزش به دختر ایرانی",
     description: "کلیپ کوتاه طنز از مستر طنز",

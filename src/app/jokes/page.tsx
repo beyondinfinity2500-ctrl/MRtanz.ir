@@ -88,7 +88,70 @@ export default function JokesPage() {
 
       {/* Joke Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-        {jokes.map((joke) => (
+        {jokes.slice(0, 25).map((joke) => (
+          <JokeCard key={joke.id} joke={joke} />
+        ))}
+
+        {/* Promotional Block 1 */}
+        <a
+          href="https://www.tr90.ir"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="card p-5 flex flex-col gap-2 hover:shadow-md transition-shadow group border border-border"
+        >
+          <span className="text-[10px] font-medium text-text-muted uppercase tracking-wider">تبلیغات</span>
+          <span className="text-sm font-bold text-text-primary group-hover:text-accent-primary transition-colors">
+            راهنمای سفر به ترکیه
+          </span>
+          <span className="text-xs text-text-muted leading-relaxed">
+            اطلاعات کامل سفر، هتل، ویزا و راهنمای گردشگری ترکیه
+          </span>
+          <span className="text-[10px] text-accent-primary mt-auto">tr90.ir</span>
+        </a>
+
+        {jokes.slice(25, 50).map((joke) => (
+          <JokeCard key={joke.id} joke={joke} />
+        ))}
+
+        {/* Promotional Block 2 */}
+        <a
+          href="https://www.adim.top"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="card p-5 flex flex-col gap-2 hover:shadow-md transition-shadow group border border-border"
+        >
+          <span className="text-[10px] font-medium text-text-muted uppercase tracking-wider">تبلیغات</span>
+          <span className="text-sm font-bold text-text-primary group-hover:text-accent-primary transition-colors">
+            کاریابی در ترکیه
+          </span>
+          <span className="text-xs text-text-muted leading-relaxed">
+            فرصت‌های شغلی، راهنمای کاریابی و استخدام در ترکیه
+          </span>
+          <span className="text-[10px] text-accent-primary mt-auto">adim.top</span>
+        </a>
+
+        {jokes.slice(50, 70).map((joke) => (
+          <JokeCard key={joke.id} joke={joke} />
+        ))}
+
+        {/* Promotional Block 3 */}
+        <a
+          href="https://www.newsiq.top/fa"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="card p-5 flex flex-col gap-2 hover:shadow-md transition-shadow group border border-border"
+        >
+          <span className="text-[10px] font-medium text-text-muted uppercase tracking-wider">تبلیغات</span>
+          <span className="text-sm font-bold text-text-primary group-hover:text-accent-primary transition-colors">
+            تحلیل مالی اخبار ترند جهان
+          </span>
+          <span className="text-xs text-text-muted leading-relaxed">
+            تحلیل بازارهای مالی، اخبار اقتصادی و ترندهای جهانی
+          </span>
+          <span className="text-[10px] text-accent-primary mt-auto">newsiq.top</span>
+        </a>
+
+        {jokes.slice(70).map((joke) => (
           <JokeCard key={joke.id} joke={joke} />
         ))}
       </div>
