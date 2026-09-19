@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig, contactInfo } from "@/data/site";
 import { AdSlot } from "@/components/AdSlot";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "تبلیغات",
@@ -51,6 +52,23 @@ export default function AdvertisePage() {
           >
             ارسال پیام در واتساپ
           </a>
+        </section>
+
+        <section className="card p-5">
+          <h2 className="font-bold text-text-primary mb-3">حمایت بدون تبلیغ</h2>
+          <p className="text-sm text-text-muted mb-3">
+            اگر می‌خواهید بدون سفارش تبلیغ از مستر طنز حمایت کنید، با خرید از
+            دیجی‌کالا از طریق لینک همکاری در فروش ما این کار را انجام دهید.
+          </p>
+          <Link
+            href="/digikala.html"
+            className="inline-flex items-center gap-2 text-sm font-medium text-accent-primary hover:text-accent-primary/80 transition-colors"
+          >
+            خرید از دیجی کالا و حمایت از مستر طنز
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </Link>
         </section>
       </div>
 

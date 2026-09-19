@@ -50,6 +50,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://www.mrtanz.ir/sitemap.xml",
+    sitemap: "https://mrtanz.ir/sitemap.xml",
   };
 }

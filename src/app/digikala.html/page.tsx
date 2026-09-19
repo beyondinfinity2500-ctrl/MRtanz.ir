@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/data/site";
 
+const DIGIKALA_AFFILIATE_URL = "https://dgkl.io/api/v1/Click/vu2dt";
+
 export const metadata: Metadata = {
   title: "حمایت از مستر طنز با خرید از دیجی‌کالا",
   description:
-    "حمایت از مستر طنز، بدون پرداخت یک ریال! با خرید از دیجی‌کالا از طریق لینک همکاری در فروش مستر طنز",
+    "حمایت از مستر طنز با خرید از دیجی‌کالا از طریق لینک همکاری در فروش. بدون هزینه اضافه، به ادامه فعالیت مستر طنز کمک کنید.",
   alternates: {
     canonical: `${siteConfig.url}/digikala.html`,
   },
   openGraph: {
     title: "حمایت از مستر طنز با خرید از دیجی‌کالا",
     description:
-      "حمایت از مستر طنز، بدون پرداخت یک ریال! با خرید از دیجی‌کالا از طریق لینک همکاری در فروش مستر طنز",
+      "حمایت از مستر طنز با خرید از دیجی‌کالا از طریق لینک همکاری در فروش. بدون هزینه اضافه.",
     type: "website",
     url: `${siteConfig.url}/digikala.html`,
   },
@@ -30,37 +32,32 @@ export default function DigikalaLegacyPage() {
             درود به شما دوستان گرامی
           </p>
           <p className="text-text-secondary text-base leading-relaxed mb-4">
-            همون‌طور که می‌دونید ساخت کار با کیفیت هزینه داره، مخصوصاً ساخت کلیپ طنز
-            که در این تورم و گرانی بتونه انرژی و روحیه بده!
-          </p>
-          <p className="text-text-secondary text-base leading-relaxed mb-4">
-            ما در مستر طنز یه راهکار خیلی ساده، اما بسیار مهم رو پیاده کردیم که
-            شما عزیزان بدون پرداخت حتی یک ریال، چه بصورت مستقیم و چه غیر مستقیم!
-            از مستر طنز و خندیدن و شاد بودن حمایت مالی کنید.
+            ساخت محتوای با کیفیت و رایگان نیاز به حمایت شما عزیزان دارد.
+            یکی از ساده‌ترین راه‌ها برای حمایت از مستر طنز، خرید از دیجی‌کالا
+            از طریق لینک همکاری در فروش ماست.
           </p>
           <p className="text-text-primary font-bold text-base">
-            و راهکار بسیار ساده هست:
+            خرید بعدی‌ات از دیجی‌کالا را از لینک ما انجام بده.
           </p>
         </section>
 
         <section className="card p-6 sm:p-8">
           <h2 className="text-xl font-bold text-text-primary mb-4">چطور کار می‌کنه؟</h2>
           <p className="text-text-secondary text-base leading-relaxed mb-4">
-            سایت دیجی‌کالا بزرگ‌ترین فروشگاه اینترنتی خاورمیانه هست و ایرانیان بسیار
-            زیادی از این فروشگاه اینترنتی خرید می‌کنند.
+            خرید از طریق لینک مستر طنز هیچ هزینه اضافه‌ای برای کاربر ندارد.
+            این لینک از سیستم همکاری در فروش دیجی‌کالا استفاده می‌کند.
           </p>
           <p className="text-text-secondary text-base leading-relaxed mb-4">
-            در واقع کافیه شما یا دوستانتان هربار که از سایت دیجی‌کالا خرید دارید،
-            آدرس سایت مستر طنز یعنی www.MrTanz.ir رو وارد کنید و روی بنر دیجی‌کالا
-            کلیک کنید و هر محصولی رو که دوست دارید سفارش بدید!
+            خرید کاربر می‌تواند از فعالیت مستر طنز حمایت کند — بدون اینکه
+            یک ریال بیشتر پرداخت کند.
           </p>
           <a
-            href="https://www.digikala.com"
+            href={DIGIKALA_AFFILIATE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-bold bg-accent-primary text-background hover:bg-accent-primary/90 transition-all duration-200"
           >
-            برای ورود به دیجی‌کالا اینجا کلیک کنید
+            خرید از دیجی‌کالا
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
@@ -72,28 +69,21 @@ export default function DigikalaLegacyPage() {
             چرا دیجی‌کالا این کار را می‌کند؟
           </h2>
           <p className="text-text-secondary text-base leading-relaxed">
-            در واقع دیجی‌کالا به جای اینکه بیاد هزینه هنگفت تبلیغات ماهانه و سالانه
-            بده که تاثیر اون روی افزایش فروش مشخص نیست، میاد به افرادی که در کار فروش
-            به دیجی‌کالا کمک می‌کنند (همکاری در فروش) پورسانت میده!
+            دیجی‌کالا به جای هزینه تبلیغات گسترده، به افرادی که در جذب مشتری
+            کمک می‌کنند کمیسیون پرداخت می‌کند. این روش به نفع همه طرف‌هاست.
           </p>
         </section>
 
         <section className="card p-6 sm:p-8">
           <h2 className="text-xl font-bold text-text-primary mb-4">
-            آیا برای حمایت از من پولی کم می‌شود؟
+            آیا برای من هزینه اضافه‌ای دارد؟
           </h2>
           <p className="text-text-secondary text-base leading-relaxed mb-4">
-            پس همون‌طور که مشاهده می‌فرمایید، دیجی‌کالا هزینه تبلیغات رو بابت
-            کمیسیون فروش به مستر طنز پرداخت می‌کنه، بدون اینکه یک ریال تفاوت
-            قیمتی برای شما وجود داشته باشه!
-          </p>
-          <p className="text-text-secondary text-base leading-relaxed mb-4">
-            پس چه شما مستقیم از دیجی‌کالا خرید کنید و چه از طریق سایت مستر طنز،
-            یک ریال هزینه اضافه پرداخت نخواهید کرد!
+            خیر. چه مستقیم از دیجی‌کالا خرید کنید و چه از طریق لینک مستر طنز،
+            هیچ تفاوت قیمتی وجود ندارد.
           </p>
           <p className="text-accent-primary font-bold text-base">
-            اما یه تفاوت داره که از طنز و شادی و خندوندن رایگان آدم‌ها حمایت
-            می‌کنید!
+            اما با خرید از لینک ما، از طنز و شادی و خندوندن رایگان آدم‌ها حمایت می‌کنید!
           </p>
         </section>
       </div>

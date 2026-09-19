@@ -215,3 +215,33 @@ export function ArticleCard({ article, className }: { article: Article; classNam
     </article>
   );
 }
+
+/* Digikala Promotional Card */
+export function DigikalaCard({ className }: { className?: string }) {
+  const DIGIKALA_AFFILIATE_URL = "https://dgkl.io/api/v1/Click/vu2dt";
+
+  return (
+    <article className={`card border border-border overflow-hidden ${className || ""}`}>
+      <div className="p-5">
+        <h3 className="font-bold text-text-primary text-base mb-2">
+          از مستر طنز حمایت کن ❤️
+        </h3>
+        <p className="text-text-muted text-sm leading-relaxed mb-4">
+          خرید بعدی‌ات از دیجی‌کالا را از لینک ما انجام بده.
+          برای تو هیچ هزینه اضافه‌ای ندارد، اما به ادامه فعالیت مستر طنز کمک می‌کند.
+        </p>
+        <a
+          href={DIGIKALA_AFFILIATE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-bold bg-accent-primary text-background hover:bg-accent-primary/90 transition-all duration-200"
+        >
+          خرید از دیجی‌کالا
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </a>
+      </div>
+    </article>
+  );
+}

@@ -58,7 +58,9 @@ export function Footer() {
             &copy; {new Date().getFullYear()} {siteConfig.name}. تمامی حقوق محفوظ است.
           </p>
           <p>
-            میزبانی: Cloudflare
+            <a href="https://www.y22.ir" target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary transition-colors">
+              طراحی توسط سایت راهنمای تهران
+            </a>
           </p>
         </div>
       </div>

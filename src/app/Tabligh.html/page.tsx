@@ -28,7 +28,7 @@ export default function TablighLegacyPage() {
         <section className="card p-6 sm:p-8">
           <p className="text-text-secondary text-base leading-relaxed mb-4">
             اگر به دنبال تبلیغات مؤثر و خلاقانه برای برند خود هستید، مستر طنز با
-            مخاطبان میلیونی خود در یوتیوب، آپارات، روبیکا و اینستاگرام آماده همکاری
+            مخاطبان میلیونی خود در یوتیوب، آپارات و اینستاگرام آماده همکاری
             با شماست.
           </p>
           <p className="text-text-secondary text-base leading-relaxed">

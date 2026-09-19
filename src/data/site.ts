@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "مستر طنز",
   nameEn: "MrTanz",
-  url: "https://www.mrtanz.ir",
+  url: "https://mrtanz.ir",
   description:
-    "مستر طنز | سایت خنده، سرگرمی، استندآپ کمدی، کلیپ‌های خنده‌دار و چالشی از کانال یوتیوب، روبیکا و آپارات",
+    "مستر طنز | سایت خنده، سرگرمی، استندآپ کمدی، کلیپ‌های خنده‌دار و چالشی از کانال یوتیوب و آپارات",
   shortDescription: "خنده و سرگرمی و استندآپ کمدی",
   ogImage: "/og-default.png",
   locale: "fa-IR",
@@ -29,9 +29,9 @@ export const socialLinks = [
     icon: "instagram" as const,
   },
   {
-    name: "روبیکا",
-    url: "https://www.rubika.ir/mrtanz_ir",
-    icon: "rubika" as const,
+    name: "Facebook",
+    url: "https://www.facebook.com/share/1EtBzLyYWt/",
+    icon: "facebook" as const,
   },
   {
     name: "فیلیمو",
@@ -45,6 +45,7 @@ export const navigationItems = [
   { label: "ویدیوها", href: "/videos/" },
   { label: "پلی‌لیست‌ها", href: "/playlists/" },
   { label: "آرشیو جوک", href: "/jokes/" },
+  { label: "دیجی کالا", href: "/digikala.html" },
   { label: "تماس با ما", href: "/contact/" },
 ];
 

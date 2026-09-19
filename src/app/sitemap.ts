@@ -84,19 +84,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/mrtanz.html`,
+      url: `${baseUrl}/mrtanz.html/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/digikala.html`,
+      url: `${baseUrl}/digikala.html/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/Tabligh.html`,
+      url: `${baseUrl}/Tabligh.html/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.6,

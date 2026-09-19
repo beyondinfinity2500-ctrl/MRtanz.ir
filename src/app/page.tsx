@@ -222,6 +222,37 @@ export default function HomePage() {
           <YouTubeCTA />
         </div>
       </section>
+
+      {/* === INTERNAL LINKS === */}
+      <section className="container-main py-8 md:py-12">
+        <h2 className="text-xl sm:text-2xl font-extrabold text-text-primary mb-5">دسترسی سریع</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+          <Link href="/videos/" className="card p-4 text-center hover:shadow-md transition-shadow group">
+            <span className="text-sm font-medium text-text-primary group-hover:text-accent-primary transition-colors">آرشیو ویدیوهای طنز</span>
+          </Link>
+          <Link href="/playlists/" className="card p-4 text-center hover:shadow-md transition-shadow group">
+            <span className="text-sm font-medium text-text-primary group-hover:text-accent-primary transition-colors">پلی‌لیست‌های مستر طنز</span>
+          </Link>
+          <Link href="/jokes/" className="card p-4 text-center hover:shadow-md transition-shadow group">
+            <span className="text-sm font-medium text-text-primary group-hover:text-accent-primary transition-colors">گلچین جوک‌های مستر طنز</span>
+          </Link>
+          <Link href="/articles/" className="card p-4 text-center hover:shadow-md transition-shadow group">
+            <span className="text-sm font-medium text-text-primary group-hover:text-accent-primary transition-colors">مطالب طنز</span>
+          </Link>
+          <Link href="/about/" className="card p-4 text-center hover:shadow-md transition-shadow group">
+            <span className="text-sm font-medium text-text-primary group-hover:text-accent-primary transition-colors">درباره مستر طنز</span>
+          </Link>
+          <Link href="/contact/" className="card p-4 text-center hover:shadow-md transition-shadow group">
+            <span className="text-sm font-medium text-text-primary group-hover:text-accent-primary transition-colors">تماس با ما</span>
+          </Link>
+          <Link href="/advertise/" className="card p-4 text-center hover:shadow-md transition-shadow group">
+            <span className="text-sm font-medium text-text-primary group-hover:text-accent-primary transition-colors">تبلیغ در مستر طنز</span>
+          </Link>
+          <Link href="/digikala.html/" className="card p-4 text-center hover:shadow-md transition-shadow group">
+            <span className="text-sm font-medium text-text-primary group-hover:text-accent-primary transition-colors">حمایت از مستر طنز</span>
+          </Link>
+        </div>
+      </section>
     </>
   );
 }
