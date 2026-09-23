@@ -84,9 +84,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* === TOP AD === */}
-      <AdSlot slot="TOP_AD" className="my-4 mx-auto container-main" />
-
       {/* === FEATURED VIDEO === */}
       {featuredVideo && (
         <section className="container-main py-8 md:py-12">

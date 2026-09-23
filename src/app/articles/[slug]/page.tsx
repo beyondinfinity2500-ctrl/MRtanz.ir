@@ -14,7 +14,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: ArticlePageProps) {
   const { slug } = await params;
-  const article = articles.find((a) => a.slug === slug);
+  const article = articles.find((a) => a.slug === decodeURIComponent(slug));
   if (!article) {
     return;
   }
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: ArticlePageProps) {
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const { slug } = await params;
-  const article = articles.find((a) => a.slug === slug);
+  const article = articles.find((a) => a.slug === decodeURIComponent(slug));
   if (!article) {
     return;
   }

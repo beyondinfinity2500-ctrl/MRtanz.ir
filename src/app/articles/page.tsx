@@ -5,8 +5,8 @@ import Link from "next/link";
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "مقالات و نوشته-ha",
-  description: "مقالات و نوشته‌های آموزamental و سرگرمنده所属 به Mister Tanj",
+  title: "مقالات و نوشته‌ها",
+  description: "مقالات و نوشته‌های آموزنده و سرگرم‌کننده از مستر طنز",
   alternates: {
     canonical: `${siteConfig.url}/articles/`,
   },
@@ -28,7 +28,7 @@ export default function ArticlesPage() {
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-text-primary mb-3">مقالات و نوشته‌ها</h1>
         <p className="text-text-secondary text-sm sm:text-base max-w-2xl">
-          مقالات و نوشته‌های آموزamental و سرگرمنده متعلق به Mister Tanj
+          مقالات و نوشته‌های آموزنده و سرگرم‌کننده از مستر طنز
         </p>
 
         {/* Articles Grid */}
@@ -40,7 +40,7 @@ export default function ArticlesPage() {
 
         {/* CTA / Navigation */}
         <div className="mt-8 card p-6 text-center">
-          <h3 className="text-lg font-bold text-text-primary mb-3">بrowse Further</h3>
+          <h3 className="text-lg font-bold text-text-primary mb-3">آرشیو مقالات</h3>
           <p className="text-text-muted mb-4">
             مقالات بیشتری به تازگی به آرشیو اضافه می‌شود
           </p>
@@ -48,7 +48,7 @@ export default function ArticlesPage() {
             href="/articles/"
             className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-bold bg-accent-primary text-background hover:bg-accent-primary/90 transition-all duration-200"
           >
-            مشاهده全部 articles
+            مشاهده همه مقالات
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>

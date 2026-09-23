@@ -19,7 +19,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PlaylistPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const playlist = getPlaylistBySlug(slug);
+  const playlist = getPlaylistBySlug(decodeURIComponent(slug));
   if (!playlist) {
     return { title: "پلی‌لیست یافت نشد" };
   }
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: PlaylistPageProps): Promise<M
 
 export default async function PlaylistPage({ params }: PlaylistPageProps) {
   const { slug } = await params;
-  const playlist = getPlaylistBySlug(slug);
+  const playlist = getPlaylistBySlug(decodeURIComponent(slug));
   if (!playlist) {
     notFound();
   }

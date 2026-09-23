@@ -18,7 +18,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: JokePageProps): Promise<Metadata> {
   const { slug } = await params;
-  const joke = getJokeBySlug(slug);
+  const joke = getJokeBySlug(decodeURIComponent(slug));
   if (!joke) {
     return { title: "جوک یافت نشد" };
   }
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: JokePageProps): Promise<Metad
 
 export default async function JokePage({ params }: JokePageProps) {
   const { slug } = await params;
-  const joke = getJokeBySlug(slug);
+  const joke = getJokeBySlug(decodeURIComponent(slug));
   if (!joke) {
     notFound();
   }

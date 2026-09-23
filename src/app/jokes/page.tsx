@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JokeCard } from "@/components/Card";
 import { AdSlot } from "@/components/AdSlot";
+import { AdBanner } from "@/components/AdBanner";
 import { jokes, getFeaturedJoke, getJokeCategories } from "@/data/jokes";
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
@@ -93,63 +94,21 @@ export default function JokesPage() {
         ))}
 
         {/* Promotional Block 1 */}
-        <a
-          href="https://www.tr90.ir"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="card p-5 flex flex-col gap-2 hover:shadow-md transition-shadow group border border-border"
-        >
-          <span className="text-[10px] font-medium text-text-muted uppercase tracking-wider">تبلیغات</span>
-          <span className="text-sm font-bold text-text-primary group-hover:text-accent-primary transition-colors">
-            راهنمای سفر به ترکیه
-          </span>
-          <span className="text-xs text-text-muted leading-relaxed">
-            اطلاعات کامل سفر، هتل، ویزا و راهنمای گردشگری ترکیه
-          </span>
-          <span className="text-[10px] text-accent-primary mt-auto">tr90.ir</span>
-        </a>
+        <AdBanner index={0} />
 
         {jokes.slice(25, 50).map((joke) => (
           <JokeCard key={joke.id} joke={joke} />
         ))}
 
         {/* Promotional Block 2 */}
-        <a
-          href="https://www.adim.top"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="card p-5 flex flex-col gap-2 hover:shadow-md transition-shadow group border border-border"
-        >
-          <span className="text-[10px] font-medium text-text-muted uppercase tracking-wider">تبلیغات</span>
-          <span className="text-sm font-bold text-text-primary group-hover:text-accent-primary transition-colors">
-            کاریابی در ترکیه
-          </span>
-          <span className="text-xs text-text-muted leading-relaxed">
-            فرصت‌های شغلی، راهنمای کاریابی و استخدام در ترکیه
-          </span>
-          <span className="text-[10px] text-accent-primary mt-auto">adim.top</span>
-        </a>
+        <AdBanner index={1} />
 
         {jokes.slice(50, 70).map((joke) => (
           <JokeCard key={joke.id} joke={joke} />
         ))}
 
         {/* Promotional Block 3 */}
-        <a
-          href="https://www.newsiq.top/fa"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="card p-5 flex flex-col gap-2 hover:shadow-md transition-shadow group border border-border"
-        >
-          <span className="text-[10px] font-medium text-text-muted uppercase tracking-wider">تبلیغات</span>
-          <span className="text-sm font-bold text-text-primary group-hover:text-accent-primary transition-colors">
-            تحلیل مالی اخبار ترند جهان
-          </span>
-          <span className="text-xs text-text-muted leading-relaxed">
-            تحلیل بازارهای مالی، اخبار اقتصادی و ترندهای جهانی
-          </span>
-          <span className="text-[10px] text-accent-primary mt-auto">newsiq.top</span>
-        </a>
+        <AdBanner index={2} />
 
         {jokes.slice(70).map((joke) => (
           <JokeCard key={joke.id} joke={joke} />

@@ -1,5 +1,45 @@
 import type { AdSlotName } from "./types";
 
+export interface Advertisement {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  domain: string;
+  active: boolean;
+}
+
+export const advertisements: Advertisement[] = [
+  {
+    id: "tr90",
+    title: "راهنمای سفر به ترکیه",
+    description: "اطلاعات کامل سفر، هتل، ویزا و راهنمای گردشگری ترکیه",
+    url: "https://www.tr90.ir",
+    domain: "tr90.ir",
+    active: true,
+  },
+  {
+    id: "adim",
+    title: "کاریابی در ترکیه",
+    description: "فرصت‌های شغلی، راهنمای کاریابی و استخدام در ترکیه",
+    url: "https://www.adim.top",
+    domain: "adim.top",
+    active: true,
+  },
+  {
+    id: "newsiq",
+    title: "تحلیل مالی اخبار ترند جهان",
+    description: "تحلیل بازارهای مالی، اخبار اقتصادی و ترندهای جهانی",
+    url: "https://www.newsiq.top/fa",
+    domain: "newsiq.top",
+    active: true,
+  },
+];
+
+export const activeAdvertisements: Advertisement[] = advertisements.filter(
+  (ad) => ad.active
+);
+
 interface AdSlotConfig {
   name: AdSlotName;
   label: string;

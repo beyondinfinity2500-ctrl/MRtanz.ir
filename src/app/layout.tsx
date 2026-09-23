@@ -4,6 +4,7 @@ import { siteConfig } from "@/data/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { YouTubeBanner } from "@/components/Social";
+import { AdBanner } from "@/components/AdBanner";
 
 export const metadata: Metadata = {
   title: {
@@ -104,7 +105,11 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <YouTubeBanner />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <AdBanner index={0} className="container-main pt-8" />
+          {children}
+          <AdBanner index={1} className="container-main py-8" />
+        </main>
         <Footer />
       </body>
     </html>

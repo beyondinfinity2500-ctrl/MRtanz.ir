@@ -19,7 +19,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: VideoPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const video = getVideoBySlug(slug);
+  const video = getVideoBySlug(decodeURIComponent(slug));
   if (!video) {
     return { title: "ویدیو یافت نشد" };
   }
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: VideoPageProps): Promise<Meta
 
 export default async function VideoPage({ params }: VideoPageProps) {
   const { slug } = await params;
-  const video = getVideoBySlug(slug);
+  const video = getVideoBySlug(decodeURIComponent(slug));
   if (!video) {
     notFound();
   }
